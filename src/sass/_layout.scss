@@ -4,6 +4,19 @@
   margin: 0 auto;
 }
 
+.header_wrapper{
+background-image: url( "../images/background.png");
+background-size: cover;
+color: $color-font-two;
+height: 600px;
+}
+
+.header_wrapper img{
+  object-fit: cover;
+}
+.header_title{
+color: $color-font-one;
+}
 .page{
-color: black;
+  //color: black;
 }

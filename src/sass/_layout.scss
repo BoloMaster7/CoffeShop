@@ -1,22 +1,67 @@
 .container{ 
-  max-width: 1140px;
+ max-width: 1140px;
   padding: 0 20px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
-.header_wrapper{
-background-image: url( "../images/background.png");
-background-size: cover;
-color: $color-font-two;
-height: 600px;
+.header{
+  background-image: url( "../images/background.png");
+  background-size: cover;
+  background-size: 100% 100%;
+  color: $color-font-two;
+  height: 100vh;
+  position: relative;
+  //background-color:  black  nie działa jak powinno poprawić
+ // opacity :70%;                   odkomentowac na koncu
 }
 
-.header_wrapper img{
+.header img{
   object-fit: cover;
 }
+
 .header_title{
-color: $color-font-one;
+  color: $color-font-one;
+  font-size: 24px;
+  //position: absolute;
+  padding-top: 20px;                          //nie dziala jak powinno, poprawic
+  padding-left: 20px;                         //nie dziala jak powinno, poprawic
 }
-.page{
-  //color: black;
+
+h1 {
+  letter-spacing: 8px;
+  font-family: $font-header;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  letter-spacing: 5px;
+  font-family: $font-header;
+  text-transform: uppercase;
+}
+
+.header_nav {
+  text-align: right;
+  padding-top: 25px;
+  font-weight: regular;
+  padding-right: 25px;
+}
+a {
+  color: grey;
+  text-decoration: none;
+  padding-left: 20px;     
+  letter-spacing: 2px;
+}
+.header-sub-title {
+  color: $color-font-two;
+  font-size: 50px;
+  //padding-top: 0px;
+  //padding-left: 0px;              dodac pozniej wartosci padding
+  //padding-right: 0px;
+  position: relative;
 }

@@ -1,5 +1,5 @@
 .container{ 
- max-width: 1140px;
+  max-width: 1140px;
   padding: 0 20px;
   margin: 0 auto;
   display: flex;
@@ -12,12 +12,11 @@
 .header{
   background-image: url( "../images/background.png");
   background-size: cover;
-  background-size: 100% 100%;
   color: $color-font-two;
   height: 100vh;
   position: relative;
   //background-color:  black  nie działa jak powinno poprawić
- // opacity :70%;                   odkomentowac na koncu
+  // opacity :70%;                   odkomentowac na koncu
 }
 
 .header img{
@@ -25,12 +24,11 @@
 }
 
 .header_title{
-  color: $color-font-one;
-  font-size: 24px;
+  color: $color-font-two;
+ // font-size: 24px;
   //position: absolute;
-  padding-top: 20px;                          //nie dziala jak powinno, poprawic
+  padding-top: 5x;                          //nie dziala jak powinno, poprawic
   padding-left: 20px;                         //nie dziala jak powinno, poprawic
-}
 
 h1 {
   letter-spacing: 8px;
@@ -43,7 +41,10 @@ h2 {
   letter-spacing: 5px;
   font-family: $font-header;
   text-transform: uppercase;
+  //font-size: 12px;
 }
+}
+
 
 .header_nav {
   text-align: right;
@@ -51,17 +52,46 @@ h2 {
   font-weight: regular;
   padding-right: 25px;
 }
+
 a {
   color: grey;
   text-decoration: none;
-  padding-left: 20px;     
+  padding-left: 20px;
   letter-spacing: 2px;
 }
-.header-sub-title {
-  color: $color-font-two;
+
+.header_subtitle {
+  color: $color-font-one;
   font-size: 50px;
   //padding-top: 0px;
   //padding-left: 0px;              dodac pozniej wartosci padding
   //padding-right: 0px;
   position: relative;
+  //top: 30%;
+  //left: 50%;
+  text-transform: uppercase;
+
+.header_subtitle::after{
+  position: absolute;
+  content: '';
+  left: 50%;
+  width: 300px;
+  height: 5px;
+  transform: translateX(-50%);
+  background: $color-font-one;
+
+.header_discover{
+  position: relative;
+  color: $color-font-two;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+ 
+  .icon_arrow {
+    font-size: 20px;
+    color: white;
+    z-index: 3;
+  }
+}
+}
 }

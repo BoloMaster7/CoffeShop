@@ -1,7 +1,7 @@
 .container{ 
   max-width: 1140px;
   padding: 0 20px;
-  margin:  0 auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -16,7 +16,7 @@
 }
 
 .header{
-  background-image: url( "../images/background.png");
+  background-image: url( "../images/background.png"), linear-gradient(rgba(0,0,0, 0.45), rgba(0,0,0, 0.45));
   background-size: cover;
   color: $color-font-white;
   height: 100vh;
@@ -27,35 +27,41 @@
     width: 100%;
     height: 100%;
   }
+
   ul {
     margin-top: 40px;
     list-style-type: none;
   }
+
   li {
     margin-left: 10px;
     font-size: 20px;
     opacity: 0.5;
     margin-right: 25px;
   }
+
   a {
     text-decoration: none;
   } 
+  a:visited {
+    color: $color-font-white;
+  }
 }
-.header::before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  opacity: 45%;
-  height: 100vh;
-  //transform: translateX(-50%);
-  background: black;
-  z-index: 1;
-}  
 
+.nav_navigation_row{
+  display: flex;
+  flex-direction: row;
+  color: $color-font-white;
+}
+
+.column{
+  display: flex;
+  flex: 0 50%;
+}
 
 .header_title{
   color: $color-font-white;
-  padding-top: 5x;                        
+  padding-top: 5x;
   padding-left: 20px;                        
 }
  
@@ -64,9 +70,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.column {
-  flex: 0 50%;
-}
+
 .col-3 {
   flex: 0 0 33%;
   position: relative;
@@ -78,50 +82,55 @@
   font-size: 45px;
   letter-spacing: 8px;
   text-transform: uppercase;
+
   h1:first-of-type {
-  margin-right: 0;
-  text-align: left;
-  margin-bottom: -10px;
+    margin-right: 0;
+    text-align: left;
+    margin-bottom: -10px;
   }
+
   h1:last-of-type {
-  position: relative;
-  text-align: right;
-  margin-top: 0;
+    position: relative;
+    text-align: right;
+    margin-top: 0;
   }
+
   h1:last-of-type::after {
-  position: absolute;
-  content: '';
-  bottom: -35px;
-  left: 50%;
-  width: 200px;
-  height: 5px;
-  transform: translateX(-50%);
-  background: $color-font-gold;
+    position: absolute;
+    content: '';
+    bottom: -35px;
+    left: 50%;
+    width: 200px;
+    height: 5px;
+    transform: translateX(-50%);
+    background: $color-font-gold;
   }
 }
+
 .nav_brand {
   color: $color-font-white;
   font-weight: bold;
   margin-left: 30px;
   letter-spacing: 5px;
+
   h1 {
     font-size: 36px;
     margin-bottom: -10px;
   }
+
   h2 {
     font-size: 16px;
   }
-
 }
+
 .header_discover{
   text-align: center;
   margin-bottom: 20px;
-  margin-top:  10px;
+  margin-top: 10px;
   letter-spacing: 6px;
-  font-size: 35px;
+  font-size: 32px;
   z-index: 2;
-
-.icon_arrow{
-font-size: 20px;
 }
-}
+  .icon-arrow{
+    font-size: 30px;
+  }

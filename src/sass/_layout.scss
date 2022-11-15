@@ -1,3 +1,4 @@
+
 .container{ 
   max-width: 1140px;
   padding: 0 20px;
@@ -12,11 +13,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
+  font-family: $font-header;
 }
 
 .header{
-  background-image: url( "../images/background.png"), linear-gradient(rgba(0,0,0, 0.45), rgba(0,0,0, 0.45));
+  background-image: url( "../images/background.png"), linear-gradient(rgba(0,0,0, 0.60), rgba(0,0,0, 0.60));
   background-size: cover;
   color: $color-font-white;
   height: 100vh;
@@ -43,6 +44,7 @@
   a {
     text-decoration: none;
   } 
+
   a:visited {
     color: $color-font-white;
   }
@@ -131,6 +133,7 @@
   font-size: 32px;
   z-index: 2;
 }
-  .icon-arrow{
-    font-size: 30px;
-  }
+
+.icon-arrow{
+  font-size: 30px;
+}

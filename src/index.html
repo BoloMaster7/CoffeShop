@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+      <script id="template-home-page" type="text/x-handlebars-template">
       <header class="header">
         <div class="container">
 
@@ -52,8 +53,8 @@
             </section>
             <section id="contact" class="container">
               <div id="contact-wrapper" class="contact wrapper"></div>
-            </section>        
-        </div>
+
+        
 
         <section class="products">
           <div class="container_products">
@@ -64,7 +65,7 @@
           <div class="row">
             <div class="col-4 products-description">
               <h3 class="name">01. LA LAGARTIJA</h3>
-              <p class="description">Mysterious and treacherous... The best choice for the start of your journey! 
+              <p class="description">Mysterious and treacherous... The best choice for the start of your journey!
                 It will provide you a rich delicious flavor</p>
               <div class="properties">
                 <p>ROASTING: <span>5/10</span></p>
@@ -72,49 +73,55 @@
               </div>
             </div>
             <div class="col-4 products-image">
-              <img src="./images/coffee-1.png">
+              <img src="./images/coffee-1.png" alt="1">
             </div>
           </div>
 
           <div class="row">
             <div class="col-4 products-image">
-              <img src="./images/coffee-2.png">
+              <img src="./images/coffee-2.png" alt ="2">
             </div>
             <div class="col-4 products-description">
               <h3 class="name">02. EL TIGRE</h3>
-              <p class="description">Really dark coffe, only for the real gourmets. 
+              <p class="description">Really dark coffe, only for the real gourmets.
                 It has bitter flavor of grapefuits and is mixed with a little bit of peanuts with caramel.</p>
               <div class="properties">
                 <p>ROASTING: <span>8/10</span></p>
                 <p>INTENSITY: <span>9/10</span></p>
               </div>
             </div>
-            
           </div>
 
           <div class="row">
             <div class="col-4 products-description">
               <h3 class="name">03. LA CUCARACHA</h3>
-              <p class="description">Sweet and intense with a big amount of different flavors. 
-                Caramel, grapes, strawberry, you name it! It's great choice for warm summer days</p>
+              <p class="description">Sweet and intense with a big amount of different flavors.
+              Caramel, grapes, strawberry, you name it! It's great choice for warm summer days</p>
               <div class="properties">
                 <p>ROASTING: <span>3/10</span></p>
                 <p>INTENSITY: <span>7/10</span></p>
               </div>
             </div>
             <div class="col-4 products-image">
-              <img src="./images/coffee-3.png">
+              <img src="./images/coffee-3.png" alt="3">
             </div>
           </div>
-
-        
           </div>
+
           <div class="bottom-footer">
             <h4>2021 EL TIGRE inc</h4>
           </div>
         </section>
+      </script>
+
+        <script id="template-contact-page" type="text/x-handlebars-template">
+          <div>
+            <p>aaaaaaaaa test123</p>
+          </div>
+        </script>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
       <script src="js/app.js" type="module"></script>
+      <script src="js/script.js" type="module"></script>
     </body>
 </html>

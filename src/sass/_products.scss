@@ -5,6 +5,7 @@
   text-transform: uppercase;
   font-size: 30px;
 }
+
 h1:last-of-type::after {
   position: absolute;
   content: '';
@@ -15,6 +16,7 @@ h1:last-of-type::after {
   transform: translateX(-50%);
   background: $color-font-gold;
 }
+
 .container_products{
   margin: 25px 0;
   display: flex;
@@ -23,19 +25,22 @@ h1:last-of-type::after {
   flex-wrap: wrap;
   font-family: $font-text;
 }
+
 .row{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-grid-gap: 100px;
-margin-top: 50px;
-margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
+
 .products-description {
   .properties {
     font-size: 20px;
-    font-weight:bold;
+    font-weight: bold;
     margin-top: 50px;
+
     p {
       margin-bottom: -15px;
       font-size: 20px;
@@ -45,12 +50,14 @@ margin-bottom: 50px;
       color: $color-font-gold;
     }
   }
+
   .description {
     font-size: 16px;
     position: relative;
     padding-left: 130px;
     margin-bottom: 10px;
   }
+
   .description::after {
     position: absolute;
     content: '';
@@ -62,15 +69,18 @@ margin-bottom: 50px;
     background: $color-font-gold;
   }
 }
+
 .name{
   font-size: 35px;
   letter-spacing: 2px;
   font-weight: bold;
 }
+
 .products-image{
   padding-left: 10px;
   //margin-left: 30px;
 }
+
 h4{
   text-align: center;
   margin-top: 20px;

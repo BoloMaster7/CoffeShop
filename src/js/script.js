@@ -1,4 +1,4 @@
-import { select,classNames } from './settings.js';
+//import { select,classNames } from './settings.js';
 //import { templates } from '../settings.js';
 /*
 const app = {
@@ -23,6 +23,8 @@ const app = {
 app.init();
 */
 
+
+/*
 const app = {
   initPages: function () {
     const thisApp = this;
@@ -65,3 +67,5 @@ const app = {
     thisApp.initPages();
   }
 };
+
+*/

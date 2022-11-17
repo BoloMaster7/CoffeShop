@@ -1,5 +1,5 @@
-//import { select,classNames } from './settings.js';
-//import { templates } from '../settings.js';
+import { select,classNames } from './settings.js';
+import { templates } from '../settings.js';
 /*
 const app = {
   initData: function() {
@@ -23,8 +23,26 @@ const app = {
 app.init();
 */
 
+class Home{
+  constructor(element){
+    const thisHome = this;
+    thisHome.render(element);
+    thisHome.initWidgets();
+  }
 
-/*
+  render(element){
+   
+    const thisHome = this;
+    const generatedHTML = templates.homePage();
+
+    thisHome.dom = {};
+    thisHome.dom.wrapper = element;
+    thisHome.dom.wrapper.innerHTML = generatedHTML;
+
+  }
+}
+
+
 const app = {
   initPages: function () {
     const thisApp = this;
@@ -68,4 +86,6 @@ const app = {
   }
 };
 
-*/
+app.init();
+
+export default Home;

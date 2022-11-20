@@ -10,20 +10,14 @@ export const select = {
     home: '.home-wrapper',
     products: 'products-wrapper',
     contact: 'contact-wrapper',
+    pages: '#pages',
   },
   nav: {
-    links: '.nav-navigation a',
+    links: '.nav_navigation_row" a',
   }
 };
 export const classNames = {
-
-  nav: {
-    active: 'active',
-  },
-  pages: {
-    active: 'active',
-  }
-
+  active: 'active',
 };
 
 export const templates = {

@@ -27,13 +27,13 @@ class Home{
   constructor(element){
     const thisHome = this;
     thisHome.render(element);
-    thisHome.initWidgets();
+    
   }
 
   render(element){
    
     const thisHome = this;
-    const generatedHTML = templates.homePage();
+    const generatedHTML = templates.contactPage();
 
     thisHome.dom = {};
     thisHome.dom.wrapper = element;

@@ -1,59 +1,68 @@
-import { select,classNames } from './settings.js';
-import { templates } from '../settings.js';
-/*
-const app = {
-  initData: function() {
-    const url = settings.db.url + '/' + settings.db.products;
-    this.data = {};
-    fetch(url)
-      .then((rawResponse) => {
-        return rawResponse.json();
-      })
-      .then((parsedResponse) => {
-        this.data.products = parsedResponse;
-      });
-  },
+import { select, classNames, templates } from './settings.js';
 
-  init: function() {
+const app = {
+  init: function () {
     const thisApp = this;
-    thisApp.initData();
+
+    thisApp.getElements();
+    thisApp.renderHomePage();
+    this.registerProductsPageClickHandler();
+    this.registerContactUsPageClickHandler();
+    this.registerHomePageClickHandler();
   },
-};
+  getElements: function () {
+    const thisApp = this;
 
-app.init();
-*/
+    thisApp.dom = {};
+    thisApp.dom.wrapper = document.querySelector(select.containerOf.app);
+  },
+  renderHomePage: function () {
+    const thisApp = this;
 
-class Home{
-  constructor(element){
-    const thisHome = this;
-    thisHome.render(element);
-    
-  }
+    const generatedHTML = templates.home();
+    thisApp.dom.wrapper.innerHTML = generatedHTML;
+  },
 
-  render(element){
-   
-    const thisHome = this;
-    const generatedHTML = templates.contactPage();
+  registerHomePageClickHandler: function () {
+    const thisApp = this;
 
-    thisHome.dom = {};
-    thisHome.dom.wrapper = element;
-    thisHome.dom.wrapper.innerHTML = generatedHTML;
+    const productLink = document.querySelectorAll(select.nav.links)[0];
 
-  }
-}
+    productLink.addEventListener('click', function () {
+      const generatedHTML = templates.home();
+      thisApp.dom.wrapper.innerHTML = generatedHTML;
+    });
+  },
 
+  registerProductsPageClickHandler: function () {
+    const thisApp = this;
 
-const app = {
+    const productLink = document.querySelectorAll(select.nav.links)[1];
+
+    productLink.addEventListener('click', function () {
+      const generatedHTML = templates.products();
+      thisApp.dom.wrapper.innerHTML = generatedHTML;
+    });
+  },
+ 
+  registerContactUsPageClickHandler: function () {
+    const thisApp = this;
+
+    const productLink = document.querySelectorAll(select.nav.links)[2];
+
+    productLink.addEventListener('click', function () {
+      const generatedHTML = templates.contactUs();
+      thisApp.dom.wrapper.innerHTML = generatedHTML;
+    });
+  },
   initPages: function () {
     const thisApp = this;
 
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
 
-    thisApp.activatePage(thisApp.pages[0].id);
-
-    for(let link of thisApp.navLinks){
-      link.addEventListener('click', function(event){
+    for (let link of thisApp.navLinks) {
+      link.addEventListener('click', function (event) {
         const clickedElement = this;
         event.preventDefault();
 
@@ -63,29 +72,16 @@ const app = {
       });
     }
   },
-
-  activatePage: function(pageId){
+  activatePage: function (pageId) {
     const thisApp = this;
 
-    for(let page of thisApp.pages){
-      page.classList.toggle(classNames.active, page.id == pageId);
-    }
-
-    for(let link of thisApp.navLinks){
+    for (let link of thisApp.navLinks) {
       link.classList.toggle(
-        classNames.active, 
+        classNames.active,
         link.getAttribute('href') == '#' + pageId
       );
     }
   },
-
-  init: function () {
-    const thisApp = this;
-
-    thisApp.initPages();
-  }
 };
 
 app.init();
-
-export default Home;

@@ -1,159 +1,256 @@
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CoffeeShop</title>
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-      <header class="header">
-        <div class="container">
-          <nav class="nav_row">
-            <div class="column">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeShop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav_row">
+          <div class="column">
             <div class="nav_brand col 6">
               <h1>EL TIGRE</h1>
               <h2>VENEZUELA COFFEE BEANS</h2>
             </div>
-              <div class="col-3 ">
-                <ul class="nav_navigation_row">
+            <div class="col-3">
+              <ul class="nav_navigation_row">
                 <li><a class="nav-link col" href="#home">HOME</a></li>
                 <li><a class="nav-link col" href="#products">PRODUCTS</a></li>
                 <li><a class="nav-link col" href="#contact">CONTACT</a></li>
-                </ul>
+              </ul>
             </div>
           </div>
-            </nav>
-          <div class="header_subtitle">
-            <h1>HOME OF</h1>
-            <h1>ORIGINAL TASTES</h1>
-          </div>
-          <div class="header_discover ">
-            <h3>DISCOVER</h3>
-            <i class="icon-arrow"></i>
+        </nav>
+        <div class="header_subtitle">
+          <h1>HOME OF</h1>
+          <h1>ORIGINAL TASTES</h1>
         </div>
+        <div class="header_discover">
+          <h3>DISCOVER</h3>
+          <i class="icon-arrow"></i>
         </div>
-          </header>
-          <div id="pages">
-            <section id="home" class="container">
-              <div id="home-wrapper" class="home wrapper"></div>
-            </section>
-            <section id="products" class="container">
-              <div id="products-wrapper" class="product-list wrapper"></div>
-            </section>
-            <section id="contact" class="container">
-              <div id="contact-wrapper" class="contact wrapper"></div>
-            </section>
-        </div>
+      </div>
+    </header>
 
+    <div id="app"></div>
 
-        <section class="products">
-          <div class="container_products">
-            <div class="products_title col-12">
+    <!-- Home page -->
+    <script id="template-home-page" type="text/x-handlebars-template">
+       <section class="products">
+        <div class="container_products">
+          <div class="products_title col-12">
             <h1>PRODUCTS</h1>
           </div>
-
+  
           <div class="row">
             <div class="col-4 products-description">
               <h3 class="name">01. LA LAGARTIJA</h3>
-              <p class="description">Mysterious and treacherous... The best choice for the start of your journey!
-                It will provide you a rich delicious flavor</p>
+              <p class="description">
+                Mysterious and treacherous... The best choice for the start of
+                your journey! It will provide you a rich delicious flavor
+              </p>
               <div class="properties">
                 <p>ROASTING: <span>5/10</span></p>
                 <p>INTENSITY: <span>6/10</span></p>
               </div>
             </div>
             <div class="col-4 products-image">
-              <img src="./images/coffee-1.png" alt="1">
+              <img src="./images/coffee-1.png" alt="1" />
             </div>
           </div>
-
+  
           <div class="row">
             <div class="col-4 products-image">
-              <img src="./images/coffee-2.png" alt="2">
+              <img src="./images/coffee-2.png" alt="2" />
             </div>
             <div class="col-4 products-description">
               <h3 class="name">02. EL TIGRE</h3>
-              <p class="description">Really dark coffe, only for the real gourmets.
-              It has bitter flavor of grapefuits and is mixed with a little bit of peanuts with caramel.</p>
+              <p class="description">
+                Really dark coffe, only for the real gourmets. It has bitter
+                flavor of grapefuits and is mixed with a little bit of peanuts
+                with caramel.
+              </p>
               <div class="properties">
                 <p>ROASTING: <span>8/10</span></p>
                 <p>INTENSITY: <span>9/10</span></p>
               </div>
             </div>
-
           </div>
-
+  
           <div class="row">
             <div class="col-4 products-description">
               <h3 class="name">03. LA CUCARACHA</h3>
-              <p class="description">Sweet and intense with a big amount of different flavors.
-              Caramel, grapes, strawberry, you name it! It's great choice for warm summer days</p>
+              <p class="description">
+                Sweet and intense with a big amount of different flavors. Caramel,
+                grapes, strawberry, you name it! It's great choice for warm summer
+                days
+              </p>
               <div class="properties">
                 <p>ROASTING: <span>3/10</span></p>
                 <p>INTENSITY: <span>7/10</span></p>
               </div>
             </div>
             <div class="col-4 products-image">
-              <img src="./images/coffee-3.png" alt="3">
+              <img src="./images/coffee-3.png" alt="3" />
             </div>
           </div>
-
-
-          </div>
-          <div class="bottom-footer">
-            <h4>2021 EL TIGRE inc</h4>
-          </div>
-        </section>
-
-        <section class="about-us">
-          <div class="container">
-			<div class="row">
-          <div class="about-us_main col-12">
-            <h1>ABOUT US</h1>
-          </div>
-          <div class="about-us-text col-6 align-self-center">
-            <p>
-            Who are we? Just a bunch of friends with
-            a love for a good coffee and desire to create
-            something new, something original.
-            <br>
-            <br>
-            Our coffees reflect us – young, wild and free.
-            We are on the journey of new tastes...<br>
-            <br>
-
-            <span>Join us!</span>
-            </p>
         </div>
-      </div>
-		</div>
-        </section>
-
-        <script id="template-contact-page" type="text/x-handlebars-template">
-        <section class="contact-us">
-    <div class="contact">
-          <div class="page-title col-12">
-              <h1>CONTACT US</h1>
+        <div class="bottom-footer">
+          <h4>2021 EL TIGRE inc</h4>
+        </div>
+      </section>
+  
+      <section class="about-us">
+        <div class="container">
+          <div class="row">
+            <div class="about-us_main col-12">
+              <h1>ABOUT US</h1>
+            </div>
+            <div class="about-us-text col-6 align-self-center">
+              <p>
+                Who are we? Just a bunch of friends with a love for a good coffee
+                and desire to create something new, something original.
+                <br />
+                <br />
+                Our coffees reflect us – young, wild and free. We are on the
+                journey of new tastes...<br />
+                <br />
+  
+                <span>Join us!</span>
+              </p>
+            </div>
           </div>
-          <div class="form col-12">
-              <label for="name">Name</label><br>
-              <input type="text" id="name" name="name"><br>
-              <label for="title">Title</label><br>
-              <input type="text" id="title" name="title"><br>
-              <label for="message">Message</label><br>
-              <input class="text-area" type="text" id="message" name="message"><br>
-              <button type="submit" value="submit">SUBMIT</button>
-          </div>
-      </div>
-    </section>
+        </div>
+      </section> 
     </script>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
-      <script src="js/app.js" type="module"></script>
-    </body>
+    <!-- Products page -->
+    <script id="template-products-page" type="text/x-handlebars-template">
+
+       <section class="products">
+        <div class="container_products">
+          <div class="products_title col-12">
+            <h1>PRODUCTS</h1>
+          </div>
+  
+          <div class="row">
+            <div class="col-4 products-description">
+              <h3 class="name">01. LA LAGARTIJA</h3>
+              <p class="description">
+                Mysterious and treacherous... The best choice for the start of
+                your journey! It will provide you a rich delicious flavor
+              </p>
+              <div class="properties">
+                <p>ROASTING: <span>5/10</span></p>
+                <p>INTENSITY: <span>6/10</span></p>
+              </div>
+            </div>
+            <div class="col-4 products-image">
+              <img src="./images/coffee-1.png" alt="1" />
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-4 products-image">
+              <img src="./images/coffee-2.png" alt="2" />
+            </div>
+            <div class="col-4 products-description">
+              <h3 class="name">02. EL TIGRE</h3>
+              <p class="description">
+                Really dark coffe, only for the real gourmets. It has bitter
+                flavor of grapefuits and is mixed with a little bit of peanuts
+                with caramel.
+              </p>
+              <div class="properties">
+                <p>ROASTING: <span>8/10</span></p>
+                <p>INTENSITY: <span>9/10</span></p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-4 products-description">
+              <h3 class="name">03. LA CUCARACHA</h3>
+              <p class="description">
+                Sweet and intense with a big amount of different flavors. Caramel,
+                grapes, strawberry, you name it! It's great choice for warm summer
+                days
+              </p>
+              <div class="properties">
+                <p>ROASTING: <span>3/10</span></p>
+                <p>INTENSITY: <span>7/10</span></p>
+              </div>
+            </div>
+            <div class="col-4 products-image">
+              <img src="./images/coffee-3.png" alt="3" />
+            </div>
+          </div>
+        </div>
+        <div class="bottom-footer">
+          <h4>2021 EL TIGRE inc</h4>
+        </div>
+      </section> 
+    </script>
+
+    <!-- About us page -->
+    <script id="template-about-us-page" type="text/x-handlebars-template">
+      <h1>About us page</h1>
+      < <section class="about-us">
+        <div class="container">
+          <div class="row">
+            <div class="about-us_main col-12">
+              <h1>ABOUT US</h1>
+            </div>
+            <div class="about-us-text col-6 align-self-center">
+              <p>
+                Who are we? Just a bunch of friends with a love for a good coffee
+                and desire to create something new, something original.
+                <br />
+                <br />
+                Our coffees reflect us – young, wild and free. We are on the
+                journey of new tastes...<br />
+                <br />
+  
+                <span>Join us!</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </script>
+
+     <!-- Contact us page -->
+
+     <script id="template-contact-us-page" type="text/x-handlebars-template">
+      <section class="contact-us">
+  <div class="contact">
+        <div class="page-title col-12">
+            <h1>CONTACT US</h1>
+        </div>
+        <div class="form col-12">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="title">Title</label><br>
+            <input type="text" id="title" name="title"><br>
+            <label for="message">Message</label><br>
+            <input class="text-area" type="text" id="message" name="message"><br>
+            <button type="submit" value="submit">SUBMIT</button>
+        </div>
+        <div class="bottom-footer">
+          <h4>2021 EL TIGRE inc</h4>
+        </div>
+    </div>
+  </section>
+  </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script src="js/script.js" type="module"></script>
+  </body>
 </html>

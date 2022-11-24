@@ -1,5 +1,6 @@
 .contact-us{
   font-family: $font-header;
+  margin-top: 75px;
 
 }
 
@@ -20,7 +21,7 @@
     content: '';
     top: 65px;
     left: 50%;
-    width: 300px;
+    width: 500px;
     height: 5px;
     transform: translateX(-50%);
     background: $color-font-gold;

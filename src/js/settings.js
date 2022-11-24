@@ -1,27 +1,31 @@
 export const select = {
-
-  templateOf: {
-    homePage: '#template-home-page',
-    contactPage: '#template-contact-page',
-    productsPage: '#template-products-page',
-    
+  homeOf: {
+    app: '#template-home-page',
+  },
+  productsOf: {
+    app: '#template-products-page',
+  },
+  aboutUsOf: {
+    app: '#template-about-us-page',
+  },
+  contactUsOf: {
+    app: '#template-contact-us-page',
   },
   containerOf: {
-    home: '.home-wrapper',
-    products: 'products-wrapper',
-    contact: 'contact-wrapper',
-    pages: '#pages',
+    app: '#app',
   },
   nav: {
-    links: '.nav_navigation_row" a',
-  }
-};
-export const classNames = {
-  active: 'active',
+    links: '.nav_navigation_row a',
+  },
 };
 
 export const templates = {
-  homePage: Handlebars.compile(document.querySelector(select.templateOf.homePage).innerHTML),
-  contactPage: Handlebars.compile(document.querySelector(select.templateOf.contactPage).innerHTML),
-  productsPage: Handlebars.compile(document.querySelector(select.templateOf.productsPage).innerHTML),   
+  home: Handlebars.compile(document.querySelector(select.homeOf.app).innerHTML),
+  products: Handlebars.compile(document.querySelector(select.productsOf.app).innerHTML),
+  aboutUs: Handlebars.compile(document.querySelector(select.aboutUsOf.app).innerHTML),
+  contactUs: Handlebars.compile(document.querySelector(select.contactUsOf.app).innerHTML),
+};
+
+export const classNames = {
+  active: 'active',
 };

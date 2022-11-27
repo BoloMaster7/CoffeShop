@@ -69,13 +69,15 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .col-3 {
   flex: 0 0 33%;
   position: relative;
   flex-direction: column;
+  position:relative;
+  float:right;
 }
 
 .header_subtitle {
@@ -135,4 +137,8 @@
 
 .icon-arrow{
   font-size: 30px;
+}
+
+.image-logo{
+  margin-right: 0px;
 }

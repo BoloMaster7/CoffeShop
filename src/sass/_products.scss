@@ -5,6 +5,7 @@
   text-transform: uppercase;
   font-size: 30px;
   position: relative;
+  margin-bottom: 50px;
   
   h1:last-of-type::after {
     position: absolute;
@@ -32,6 +33,7 @@
     font-size: 20px;
     font-weight: bold;
     margin-top: 50px;
+    padding: 20px;
 
     p {
       margin-bottom: -15px;
@@ -49,6 +51,8 @@
     padding-left: 130px;
     margin-bottom: 10px;
   }
+
+ 
 
   .description::after {
     position: absolute;
@@ -69,7 +73,7 @@
 }
 
 .products-image{
-  padding-left: 10px;
+  padding: 30px;
   //margin-left: 30px;
 }
 
@@ -78,7 +82,11 @@ h4{
   margin-top: 20px;
 }
 
-.products {
-  img {
+.products img  {
     box-shadow: 0 0 60px 0 #696969;
-  }}
+    max-width: 100%;
+  } 
+.png {
+  box-shadow: 0 0 60px 0 #696969;
+  max-width: 100%;
+}

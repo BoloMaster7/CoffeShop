@@ -31,6 +31,7 @@
   ul {
     margin-top: 40px;
     list-style-type: none;
+    flex-wrap: wrap;
   }
 
   li {
@@ -76,8 +77,8 @@
   flex: 0 0 33%;
   position: relative;
   flex-direction: column;
-  position:relative;
-  float:right;
+  position: relative;
+  float: right;
 }
 
 .header_subtitle {
